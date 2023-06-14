@@ -24,6 +24,8 @@
 	<modules>
 		<module>java-path-core-basic</module>
 		<module>java-path-core-oop</module>
+        <module>java-path-core-collection-2</module>
+		<module>java-path-core-exception</module>
 	</modules>
 
 	<!-- Properties/Variables -->
