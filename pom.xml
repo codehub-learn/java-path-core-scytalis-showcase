@@ -24,8 +24,9 @@
 	<modules>
 		<module>java-path-core-basic</module>
 		<module>java-path-core-oop</module>
-        <module>java-path-core-collection-2</module>
+		<module>java-path-core-collection-2</module>
 		<module>java-path-core-exception</module>
+		<module>java-path-core-stream</module>
 	</modules>
 
 	<!-- Properties/Variables -->
@@ -47,6 +48,7 @@
 		<log4j2.version>2.18.0</log4j2.version>
 		<slf4j.version>1.7.36</slf4j.version>
 		<disruptor.version>3.4.4</disruptor.version>
+		<lombok.version>1.18.28</lombok.version>
 	</properties>
 
 	<dependencyManagement>
@@ -106,6 +108,12 @@
 			<groupId>com.lmax</groupId>
 			<artifactId>disruptor</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lombok.version}</version>
+			<optional>true</optional>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -162,6 +170,13 @@
 						plugin, a new compiler parameter to replace the source and target version parameters
 						-->
 						<release>${target.jdk}</release>
+						<annotationProcessorPaths>
+							<path>
+								<groupId>org.projectlombok</groupId>
+								<artifactId>lombok</artifactId>
+								<version>${lombok.version}</version>
+							</path>
+						</annotationProcessorPaths>
 					</configuration>
 				</plugin>
 			</plugins>
