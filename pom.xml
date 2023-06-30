@@ -28,6 +28,7 @@
 		<module>java-path-core-exception</module>
 		<module>java-path-core-stream</module>
 		<module>java-path-core-testing</module>
+		<module>java-path-core-hibernate</module>
 	</modules>
 
 	<!-- Properties/Variables -->
